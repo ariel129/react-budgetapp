@@ -1,9 +1,11 @@
 import React, {useContext} from 'react';
 import {BudgetContext} from '../Context/Context';
 import {FaTrashAlt} from 'react-icons/fa';
+import moment from 'moment';
 
 const IncomeDetails = ({budget}) => {
   const {dispatch} = useContext(BudgetContext);
+  const dt = moment(budget.date).format('MM/DD/YYYY');
 
   const handleDelete = () => {
     dispatch({
@@ -15,7 +17,7 @@ const IncomeDetails = ({budget}) => {
   return (
       <li onClick={handleDelete}>
         <div><FaTrashAlt/>{budget.description + ' ' +
-        budget.amount} </div>
+        budget.amount + ' ' + dt} </div>
       </li>
   );
 };

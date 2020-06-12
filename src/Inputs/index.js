@@ -50,6 +50,9 @@ function IncomeExpenseInput() {
           amount,
         },
       });
+
+      setDescription('');
+      setAmount('');
     }
   };
 

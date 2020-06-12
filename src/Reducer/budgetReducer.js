@@ -7,6 +7,7 @@ export const budgetReducer = (state, action) => {
           options: action.budget.option,
           description: action.budget.description,
           amount: action.budget.amount,
+          date: new Date()
         },
       ];
     case 'REMOVE_BUDGET':
