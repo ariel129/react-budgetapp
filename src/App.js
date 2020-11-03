@@ -3,7 +3,7 @@ import './App.css';
 
 import BudgetContextProvider from './Context/Context';
 import IncomeExpenseInput from './Inputs';
-import Lists from './Lists';
+import Lists from './Lists'
 
 function App() {
   return (
